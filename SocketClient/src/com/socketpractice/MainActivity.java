@@ -22,6 +22,7 @@ import android.view.View.OnClickListener;
 
 public class MainActivity extends Activity implements OnClickListener{
 
+    // test edit
 	CommController comm = null;
 	Handler handler = null;
 	EditText editSendMsg = null;
@@ -130,23 +131,23 @@ public class MainActivity extends Activity implements OnClickListener{
 
 	public void onClickButton1(View v){
 		
-		// IPƒAƒhƒŒƒX‚ğ“Ç‚İæ‚é
+		// IPï¿½Aï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½Ç‚İï¿½ï¿½
 		EditText edit1 = (EditText)findViewById(R.id.editText1);
 		String adress = edit1.getText().toString();
 		
-		// ƒ|[ƒg”Ô†‚ğ“Ç‚İæ‚é
+		// ï¿½|ï¿½[ï¿½gï¿½Ôï¿½ï¿½ï¿½Ç‚İï¿½ï¿½
 		EditText edit2 = (EditText)findViewById(R.id.editText2);
 		String strPort = edit2.getText().toString();
 		int port = Integer.parseInt(strPort);
 		
-		// ‘—M‚·‚éƒƒbƒZ[ƒW‚ğ“Ç‚İæ‚é
+		// ï¿½ï¿½ï¿½Mï¿½ï¿½ï¿½éƒï¿½bï¿½Zï¿½[ï¿½Wï¿½ï¿½Ç‚İï¿½ï¿½
 		EditText edit3 = (EditText)findViewById(R.id.editText3);
 		String msg = edit3.getText().toString();
 		
-		// MainƒXƒŒƒbƒh‚Å’ÊM‚ğs‚¨‚¤‚Æ‚·‚é‚ÆA
-		// NetworkOnMainThreadException‚ª”­¶‚·‚éB
-		// AsyncTaskƒNƒ‰ƒX‚Ì”h¶ƒNƒ‰ƒX‚ğÀ‘•‚µAdoInBackgound()ƒƒ\ƒbƒh“à
-		// ‚Åˆ—‚ğs‚¤‚±‚Æ‚Å‚±‚Ì—áŠO‚ğ‰ñ”ğ‚·‚éB
+		// Mainï¿½Xï¿½ï¿½ï¿½bï¿½hï¿½Å’ÊMï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ï¿½ÆA
+		// NetworkOnMainThreadExceptionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
+		// AsyncTaskï¿½Nï¿½ï¿½ï¿½Xï¿½Ì”hï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½AdoInBackgound()ï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½ï¿½
+		// ï¿½Åï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Æ‚Å‚ï¿½ï¿½Ì—ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½B
 		
 		if(comm==null)
 		{
@@ -154,8 +155,8 @@ public class MainActivity extends Activity implements OnClickListener{
 			comm.setHandler(handler);
 		}
 		
-		// ƒ\ƒPƒbƒg‚ğæ“¾‚·‚éB
-		// TODO : ˆø”‚Å“n‚µ‚Ä‚¢‚éBƒƒbƒZ[ƒW‚ğ“Š‚°‚é‚Ì‚ğ‚â‚ß‚½‚Ì‚Åíœ‚·‚éB
+		// ï¿½\ï¿½Pï¿½bï¿½gï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½B
+		// TODO : ï¿½ï¿½Å“nï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½bï¿½Zï¿½[ï¿½Wï¿½ğ“Š‚ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ß‚ï¿½ï¿½Ì‚Åíœï¿½ï¿½ï¿½ï¿½B
 		comm.execute(msg);
 
 		
